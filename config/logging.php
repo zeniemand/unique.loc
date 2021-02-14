@@ -35,6 +35,11 @@ return [
     */
 
     'channels' => [
+        //для испытания отправки мейлов, сохраняться будут в кастомный лог:
+        'mailer' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/mailer.log'),
+        ],
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],
