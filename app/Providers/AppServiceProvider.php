@@ -30,6 +30,11 @@ class AppServiceProvider extends ServiceProvider
         //
         Schema::defaultStringLength(191);
 
+        dd($_ENV);
+
+        $env = env('APP_ENV');
+        dd(['APP_ENV value: ' => $env]);
+
         if($this->app->environment('production')) {
             //\URL::forceScheme('https');
             //dd(['message' => 'stooop']);
